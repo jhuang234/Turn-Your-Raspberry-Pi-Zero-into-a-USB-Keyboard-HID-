@@ -46,4 +46,21 @@ chmod 666 /dev/hidg0
 
 
  you have to run usr/bin/isticktoit_usb manually or through systemd on boot if you want it to work.
- 
+
+
+
+
+
+ tk@orangepilite:~$ nmcli dev wifi list
+*  SSID                     MODE   CHAN  RATE       SIGNAL  BARS  SECURITY  
+   EasyBox-116D28           Infra  9     54 Mbit/s  59      ▂▄▆_  WPA1 WPA2 
+   Snort-Honeynet           Infra  13    54 Mbit/s  59      ▂▄▆_  WPA2      
+   --                       Infra  6     54 Mbit/s  44      ▂▄__  WPA2      
+   DISTORTEDPEOPLE          Infra  9     54 Mbit/s  40      ▂▄__  WPA1 WPA2 
+   WLAN-341381              Infra  1     54 Mbit/s  22      ▂___  WPA2      
+   FRITZ!Box Fon WLAN 7360  Infra  1     54 Mbit/s  17      ▂___  WPA1 WPA2 
+
+tk@orangepilite:~$ sudo nmcli --ask dev wifi connect 'Snort-Honeynet'
+[sudo] password for tk: 
+Password: 
+Device 'wlan0' successfully activated with 'ea8c06e7-4edd-4455-a336-4e736e9bef74'.
